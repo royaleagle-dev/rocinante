@@ -1,0 +1,63 @@
+@keyframes loading{
+    0%{
+        width: 100%;
+    }
+    25%{
+        width: 75%;
+    }
+    50%{
+        width: 50%;
+    }
+    75%{
+        width: 25%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes animate_plane {
+    0%{
+        filter: invert(100%);
+    }
+    10%{
+        transform: translate(10%, 180%);
+        filter:invert(100%);
+    }
+    20%{
+        transform: translate(30%, 0%);
+        filter:invert(100%);
+    }    
+    30%{
+        transform: translate(60%, 180%);
+        filter:invert(100%);
+    }
+    40%{
+        transform: translate(90%, 0%);
+        filter:invert(100%);
+    }
+    50%{
+        transform: translate(120%, 180%);
+        filter:invert(100%);
+    }
+    60%{
+        transform: translate(150%, 0%);
+        filter:invert(100%);
+    }
+    70%{
+        transform: translate(180%, 180%);
+        filter:invert(100%);
+    }
+    80%{
+        transform: translate(210%, 0%);
+        filter:invert(100%);
+    }
+    90%{
+        transform: translate(220%, 180%);
+        filter:invert(100%);
+    }
+    100%{
+        transform: translate(250%, 0%);
+        filter:invert(100%);
+    }
+}
