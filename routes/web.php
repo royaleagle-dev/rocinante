@@ -20,10 +20,11 @@ Route::get('/login', [RociAuthController::class, 'login'])->name('login');
 Route::post('/loginProcessor', [RociAuthController::class, 'loginProcessor'])->name('loginProcessor');
 Route::get('/register', [RociAuthController::class, 'register'])->name('register');
 Route::post('/registerProcessor', [RociAuthController::class, 'registerProcessor'])->name('registerProcessor');
+Route::get('/logout', [RociAuthController::class, 'logout'])->name('logout');
 
 
 
-Route::get('/', [AviatorController::class, 'index'])->name('index');
+Route::get('/', [AviatorController::class, 'index'])->name('index')->middleware('auth');
 Route::post('/logRound', [AviatorController::class, 'logRound'])->name('logRound');
 Route::get('/roundCode', [AviatorController::class, 'roundCode'])->name('roundCode');
 Route::get('/loadPrevRounds', [AviatorController::class, 'prevRounds'])->name('loadPrevRounds');

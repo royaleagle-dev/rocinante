@@ -12,7 +12,7 @@
             <p>Aviator Clone</p>
             <div class="flex items-center justify-between gap-10">
                 <a href="">Home</a>
-                <a href="">Logout</a>
+                <a href="{{ route('logout') }}">Logout</a>
                 <a href="" id="userBalance" style="font-weight:bold">{{ Auth::user()->balance }}</a>
             </div>
         </section>

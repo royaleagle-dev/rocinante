@@ -12,6 +12,13 @@ use Illuminate\Support\Facades\Auth;
 
 class RociAuthController extends Controller
 {
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect(route('login'));
+    }
+
     public function login(){
         return view("authentication.login");
     }
