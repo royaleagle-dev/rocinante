@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AviatorController;
 use App\Http\Controllers\RociAuthController;
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,9 @@ Route::get('/register', [RociAuthController::class, 'register'])->name('register
 Route::post('/registerProcessor', [RociAuthController::class, 'registerProcessor'])->name('registerProcessor');
 Route::get('/logout', [RociAuthController::class, 'logout'])->name('logout');
 
+//payments
+Route::post('/verifyDeposit', [PaymentController::class, 'verifyDeposit'])->name('payment.verifyDeposit')->middleware('auth');
+
 
 
 Route::get('/', [AviatorController::class, 'index'])->name('index')->middleware('auth');
@@ -29,3 +33,4 @@ Route::post('/logRound', [AviatorController::class, 'logRound'])->name('logRound
 Route::get('/roundCode', [AviatorController::class, 'roundCode'])->name('roundCode');
 Route::get('/loadPrevRounds', [AviatorController::class, 'prevRounds'])->name('loadPrevRounds');
 Route::get('/loadWinnings', [AviatorController::class, 'winnings'])->name('loadWinnings');
+Route::get('/deposit', [PaymentController::class, 'deposit'])->name('deposit')->middleware('auth');

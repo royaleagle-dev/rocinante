@@ -49,7 +49,7 @@
                         <h1 class="font-bold" style="font-size:100px"><span id="multiplierText">0.00</span><span>x</span></h1>
                         <div class="md:flex gap-5 justify-center">
                             <div>
-                                <input type="number" min="10" max="10000" value="10" id="input1" class="mb-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required>
+                                <input type="number" id="input1" class="mb-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required>
                                 <button id="stakeBtn1" class="text-white text-center font-bold py-2 px-8 bg-red-700 w-60 hover:bg-red-500 rounded-lg" onclick="stake1('input1')">
                                     STAKE
                                     <div class="flex items-center justify-center gap-2 mt-2">

@@ -29,7 +29,7 @@ class AviatorController extends Controller
 
 	public function winnings(){
 		$data = [
-			'winnings' => AviatorModel::where('win_status', 1)->where('user_id', Auth::user()->id)->limit(10)->get()->sortByDesc('created_at'),
+			'winnings' => AviatorModel::where('win_status', 1)->where('user_id', Auth::user()->id)->offset(10)->limit(10)->get()->sortByDesc('created_at'),
 		];
 		return view("winnings", $data);
 	}
